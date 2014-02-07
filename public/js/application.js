@@ -7,6 +7,7 @@ $(document).ready(function() {
   }
   $('.answers').prepend($node);
 
+
   $('form').on('click', '.removeVar', function(){
     $(this).parent().remove();
     //varCount--;
@@ -18,6 +19,16 @@ $(document).ready(function() {
     $node = '<p><label for="var'+varCount+'">Answer : </label><input type="text" name="var'+varCount+'" id="var'+varCount+'"><span class="removeVar">Remove Answer</span></p>';
     $(this).parent().before($node);
   });
+
+  // send an HTTP DELETE request for the sign-out link
+  $('a#sign-out').on("click", function (e) {
+    e.preventDefault();
+    var request = $.ajax({ url: $(this).attr('href'), type: 'delete' });
+    request.done(function () { window.location = "/"; });
+  });
+
+
+});
 
   $('#create_survey').submit(function(event){
     event.preventDefault();
@@ -31,6 +42,3 @@ $(document).ready(function() {
   })
 });
 
-// Need to clear out the form when 'submitted' and also get rid of the survey name
-// Accept multiple questions
-// Reset button?
