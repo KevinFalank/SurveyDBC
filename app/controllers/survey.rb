@@ -29,6 +29,8 @@ get '/surveys/:id' do
 end
 
 post '/surveys' do
-  puts params
   params.inspect
+
+  # @answers = params[:answers]
+  # @answers.inspect
 end
