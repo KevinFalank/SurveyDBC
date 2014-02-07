@@ -1,8 +1,7 @@
-def method_name
+def generate_answers(params)
+  values_array = []
   params.each do |key, value|
-    if key =~ /var\d+/
-      values_array << value
-    end
-
+    values_array << value if key =~ /var\d+/
   end
+  values_array
 end

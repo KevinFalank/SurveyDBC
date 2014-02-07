@@ -3,20 +3,19 @@ get '/create' do
 end
 
 post '/create' do
-  survey = Survey.create(users_id: session[:id],
-                title: params[:title])
-  survey.questions << question = Question.create(text: params[:question])
-  values_array = []
-  params.each do |key, value|
-    if key =~ /var\d+/
-      values_array << value
-    end
+  if session[:survey_id] == nil && params[:title] == ""
+    "Survey needs a title"
+  else
+    session[:survey_id] = Survey.create(users_id: session[:id],
+                  title: params[:title]).id if params[:title] != nil
+    Survey.find(session[:survey_id]).questions << question = Question.create(text: params[:question]) if params[:question] != ""
 
-  end
-
-   values_array.each do |answer|
-    question.answers << Answer.create(text: answer)
+     generate_answers(params).each do |answer|
+      question.answers << Answer.create(text: answer) if answer != ""
+     end
    end
+
+    redirect '/create'
 end
 
 # Take each element with name that matches var and
@@ -36,7 +35,6 @@ post '/surveys' do
   @answers.each do |q, a|
     Result.create(participant_id: participant.id, answer_id: a)
   end
-
-  redirect '/'
-
 end
+
+
