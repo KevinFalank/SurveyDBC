@@ -25,9 +25,6 @@ $(document).ready(function() {
     var request = $.ajax({ url: $(this).attr('href'), type: 'delete' });
     request.done(function () { window.location = "/"; });
   });
-
-});
-
   $('#create_survey').submit(function(event){
     event.preventDefault();
     var data = $(this).serialize();
@@ -39,4 +36,5 @@ $(document).ready(function() {
     })
   })
 });
+
 
