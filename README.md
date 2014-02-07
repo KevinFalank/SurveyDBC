@@ -1,7 +1,8 @@
 #Step 1: Wireframing
 
 1. '/' Index page: 
-   - navigation: login/signup
+   - navigation: login/signup 
+      -when user is logged in, the nav changes to account management, create survey, and logout
    - Shows a list of all surveys
      -Each survey shows 
         -Survey creator, 
