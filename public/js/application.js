@@ -26,8 +26,6 @@ $(document).ready(function() {
     request.done(function () { window.location = "/"; });
   });
 
-});
-
   $('#create_survey').submit(function(event){
     event.preventDefault();
     var data = $(this).serialize();
