@@ -20,6 +20,12 @@ post '/users' do
   end
 end
 
+get '/users/:user_id/account' do
+  @href_root = "surveys"
+  @surveys = Survey.where('users_id = ?', params[:user_id])
+  erb :dashboard
+end
+
 #----------- SESSIONS -----------
 
 get '/sessions/new' do
