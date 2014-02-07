@@ -1,7 +1,11 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  var startingNo = 3;
+  var $node = "";
+  for(varCount=0;varCount<=startingNo;varCount++){
+    var displayCount = varCount+1;
+    $node += '<p><label for="var'+displayCount+'">Answer '+displayCount+': </label><input type="text" name="var'+displayCount+'" id="var'+displayCount+'"><span class="removeVar">Remove Answer</span></p>';
+  }
+  $('form div').prepend($node);
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
   // send an HTTP DELETE request for the sign-out link
@@ -11,4 +15,19 @@ $(document).ready(function() {
     request.done(function () { window.location = "/"; });
   });
 
+
+  $('form').on('click', '.removeVar', function(){
+    $(this).parent().remove();
+    //varCount--;
+  });
+
+  $('#addVar').on('click', function(){
+    //new node
+    varCount++;
+    $node = '<p><label for="var'+varCount+'">Answer '+varCount+': </label><input type="text" name="var'+varCount+'" id="var'+varCount+'"><span class="removeVar">Remove Answer</span></p>';
+    $(this).parent().before($node);
+  });
+
 });
+
+
