@@ -52,6 +52,8 @@ login form modal.
 
 #Schema
 
+![]/(Documentation/schema.jpg)
+
 1. Users
   - id
   - name
