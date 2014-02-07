@@ -1,7 +1,7 @@
 <div class="container">
   <ul>
   <% @surveys.each do |survey| %>
-    <li> <p> <a href='#'> <%= survey.title %> </a> - <%= survey.created_at %> - <%= survey.participants.count %>  </p> </li>
+    <li> <p> <a href='/surveys/<%=survey.id%>'> <%= survey.title %> </a> - <%= survey.created_at %> - <%= survey.participants.count %>  </p> </li>
   <% end %>
   </ul>
 </div>
