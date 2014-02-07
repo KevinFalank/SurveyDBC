@@ -67,7 +67,7 @@ login form modal.
   - survey id
   - content
 
-4. Answers table
+4. Possible Answers table
  - question_id
  - text
 
