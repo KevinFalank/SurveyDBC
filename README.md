@@ -2,12 +2,12 @@
 
 ![](Documentation/wireframe.jpg)
 
-1. '/' Index page: 
-   - navigation: login/signup 
+1. '/' Index page:
+   - navigation: login/signup
       -when user is logged in, the nav changes to account management, create survey, and logout
    - Shows a list of all surveys
-     -Each survey shows 
-        -Survey creator, 
+     -Each survey shows
+        -Survey creator,
         -Survey created
         -Survey count
         -Survey is a link to the page for that survey
@@ -18,7 +18,7 @@ login form modal.
 
 2. '/login' (partial)
   - login form
-   - username 
+   - username
    - password
    - submit buton
 
@@ -48,7 +48,7 @@ login form modal.
     - submit button
 
 8. Thank you for taking survey!
-  - Button that redirects to main page 
+  - Button that redirects to main page
 
 ----------------------------------------------------------
 
@@ -75,7 +75,7 @@ login form modal.
  - question_id
  - text
 
-5. Participant 
+5. Participant
  - user_id
  - survey_id
 
@@ -93,7 +93,7 @@ This is going to use a combination of pure JavaScript and AJAX to achieve the de
 
 A survey will have many questions. Each question will have many possible responses. A voter will select one (and only one) response for each question in a survey.
 
-##Objectives 
+##Objectives
 
 ###Models
 Go back to the polling schema challenges. This schema will be fairly complex and it will help to think in terms of survey-creators versus survey-voters.
@@ -110,7 +110,7 @@ There should be at least 6 core models/tables. You'll need a table to hold rows 
 Each of these should correspond to a single table in your database and a single model in your app.Users need to be signed in to create a survey and vote in a survey.
 
 ###Wireframes
-Work through wireframes and discuss what your core pages are and what your core user flows are. 
+Work through wireframes and discuss what your core pages are and what your core user flows are.
 
 There should be two _core flows_: survey creation and survey completion.
 One possible division of labor would be to separate these two flows.
@@ -120,7 +120,7 @@ Users will want to create their surveys in "one go" by adding multiple questions
 
 - [Adding Form Fields Dynamically with jQuery](http://www.mustbebuilt.co.uk/2012/07/27/adding- form-fields-dynamically-with-jquery/)
 - [Dynamically Add Input Fields To Form Using jQuery](http://www.infotuts.com/dynamically-add- input-fields-to-form-jquery/)
-￼￼￼￼￼￼￼￼￼￼
+
 Google "_jquery dynamic form fields_" to find more.
 
 To start and for your own sanity, maybe limit each survey to a single question. Create a version with a single question per survey working first and add support for multiple questions later.
@@ -142,4 +142,3 @@ At the very least, create some _simple HTML bar charts_ by having percentage-wid
 If you're looking for more advanced features, how about something that lets a user view a survey without logging in but pops up a [_modal dialog_](http://www.ericmmartin.com/projects/simplemodal/) to prompt a user to _sign in/sign up_ right before they vote?
 
 How about _more advanced visualizations_, like time series? How about focusing on making the user interface really nice? How about multiple question types?
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼
