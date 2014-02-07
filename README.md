@@ -52,7 +52,7 @@ login form modal.
 
 #Schema
 
-![]/(Documentation/schema.jpg)
+![](Documentation/schema.jpg)
 
 1. Users
   - id
