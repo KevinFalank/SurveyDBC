@@ -27,3 +27,8 @@ get '/surveys/:id' do
   @survey = Survey.find(params[:id])
   erb :display_survey
 end
+
+post '/surveys' do
+  puts params
+  params.inspect
+end

@@ -1,12 +1,15 @@
 <div class="container">
-  <ul>
-  <% @survey.questions.each do |question| %>
-    <li> <%= question.text %> </li>
-     <ul>
-     <% question.answers.each do |answer| %>
-      <li> <%= answer.text %> </li>
-     <% end %>
+  <form id="display_survey" action="/surveys" method="post">
+    <ul>
+    <% @survey.questions.each do |question| %>
+      <li> <%= question.text %> </li>
+       <ul>
+       <% question.answers.each do |answer| %>
+        <input type='radio' name= '<%= answer.id %>'>  <%= answer.text %> <br>
+       <% end %>
+      </ul>
+    <% end %>
     </ul>
-  <% end %>
-  </ul>
+    <input type='submit' value='submit survey'>
+  </form>
 </div>
