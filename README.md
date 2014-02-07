@@ -63,6 +63,9 @@ login form modal.
   - created_at(timestamp)
   - user_id
 
+3. Question
+  - survey id
+  - content
 
 
 --------------------------------------------------------
