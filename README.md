@@ -29,16 +29,19 @@ login form modal.
   - ignore user profile (don't change name or password)
   - list of surveys created
 
-5. Statistics page for surveys
+5. 'Statistics page for surveys'
   -This is a dummy page
 
-6. 'What is the resful way to create page
+6. 'What is the resful way to create page route'
   - Survey has a name
-  -Survey has a list of questions
+  - Survey has a list of already created questions
+  - Survey has a question form
     - Question
-    - set of answers
+    - Set of answers
+  - Create Question button
+  - Kill survey button
 
-
+7. ' '
 
 
 
