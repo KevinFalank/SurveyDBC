@@ -1,6 +1,8 @@
 <div>
+  <ul>
   <% @surveys.each do |survey| %>
-   <p> yolo</p>
+    <li> <p> <a href='#'> <%= survey.title %> </a> - <%= survey.created_at %> - <%= survey.participants.count %>  </p> </li>
   <% end %>
+  </ul>
 </div>
 
