@@ -29,8 +29,14 @@ get '/surveys/:id' do
 end
 
 post '/surveys' do
-  params.inspect
+  #params.inspect
+  @answers = params[:answers]
+  @survey_id = params[:survey_id]
+  participant = Participant.create(survey_id: @survey_id, user_id: session[:user_id])
+  @answers.each do |q, a|
+    Result.create(participant_id: participant.id, answer_id: a)
+  end
 
-  # @answers = params[:answers]
-  # @answers.inspect
+  redirect '/'
+
 end
