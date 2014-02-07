@@ -1,5 +1,7 @@
 #Step 1: Wireframing
 
+![](Documentation/wireframe.jpg)
+
 1. '/' Index page: 
    - navigation: login/signup 
       -when user is logged in, the nav changes to account management, create survey, and logout
