@@ -67,6 +67,18 @@ login form modal.
   - survey id
   - content
 
+4. Answers table
+ - question_id
+ - text
+
+5. Participant 
+ - user_id
+ - survey_id
+
+6. Results
+ - participants_id
+ - answers_id
+
 
 --------------------------------------------------------
 #Survey Gorilla Challenge
