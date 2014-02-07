@@ -32,6 +32,14 @@ login form modal.
 5. Statistics page for surveys
   -This is a dummy page
 
+6. 'What is the resful way to create page
+  - Survey has a name
+  -Survey has a list of questions
+    - Question
+    - set of answers
+
+
+
 
 
 --------------------------------------------------------
