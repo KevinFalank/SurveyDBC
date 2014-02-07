@@ -29,6 +29,9 @@ login form modal.
   - ignore user profile (don't change name or password)
   - list of surveys created
 
+5. Statistics page for surveys
+  -This is a dummy page
+
 
 
 --------------------------------------------------------
