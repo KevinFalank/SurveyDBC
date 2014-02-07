@@ -48,7 +48,15 @@ login form modal.
 8. Thank you for taking survey!
   - Button that redirects to main page 
 
+----------------------------------------------------------
 
+#Schema
+
+1. Users
+  - id
+  - name
+  - password
+  - timestamps
 
 
 --------------------------------------------------------
