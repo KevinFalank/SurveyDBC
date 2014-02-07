@@ -5,7 +5,7 @@ $(document).ready(function() {
     var displayCount = varCount+1;
     $node += '<p><label for="var'+displayCount+'">Answer '+displayCount+': </label><input type="text" name="var'+displayCount+'" id="var'+displayCount+'"><span class="removeVar">Remove Answer</span></p>';
   }
-  $('form div').prepend($node);
+  $('.answers').prepend($node);
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
   // send an HTTP DELETE request for the sign-out link
