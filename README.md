@@ -58,6 +58,12 @@ login form modal.
   - password
   - timestamps
 
+2. Survey
+  - title
+  - created_at(timestamp)
+  - user_id
+
+
 
 --------------------------------------------------------
 #Survey Gorilla Challenge
