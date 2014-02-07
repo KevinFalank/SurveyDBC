@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var startingNo = 2;
+  var startingNo = 3;
   var $node = "";
   for(varCount=0;varCount<=startingNo;varCount++){
     var displayCount = varCount+1;

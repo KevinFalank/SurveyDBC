@@ -22,4 +22,3 @@ end
 # Take each element with name that matches var and
 # shovel to an array.
 # Iterate through array to add values to db
-# /var\d+/
