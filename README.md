@@ -45,9 +45,8 @@ login form modal.
   - Display survey
     - submit button
 
-
-
-
+8. Thank you for taking survey!
+  - Button that redirects to main page 
 
 
 
