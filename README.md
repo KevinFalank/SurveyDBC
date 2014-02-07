@@ -1,5 +1,9 @@
+#Step 1: Wireframing
 
 
+
+
+--------------------------------------------------------
 #Survey Gorilla Challenge
 
 We're going to build a survey application that lets users create their own multiple-choice polls and other users to vote in them.
