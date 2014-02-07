@@ -16,12 +16,19 @@ login form modal.
 
 2. '/login' (partial)
   - login form
-   -username 
+   - username 
    - password
-   -submit buton
+   - submit buton
 
 3. '/signup' (partial)
-   copy of sign-in
+   - copy of sign-in
+
+4. '/users/user_id/account_management'
+  - nav bar
+  - landing page for reporting and statistics
+  - ignore user profile (don't change name or password)
+  - list of surveys created
+
 
 
 --------------------------------------------------------
