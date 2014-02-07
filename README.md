@@ -1,6 +1,14 @@
 #Step 1: Wireframing
 
-
+1. '/' Index page: 
+   - navigation: login/signup
+   - Shows a list of all surveys
+     -Each survey shows 
+        -Survey creator, 
+        -Survey created
+        -Survey count
+        -Survey is a link to the page for that survey
+   This is sorting somehow.
 
 
 --------------------------------------------------------
