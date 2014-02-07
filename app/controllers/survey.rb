@@ -22,3 +22,8 @@ end
 # Take each element with name that matches var and
 # shovel to an array.
 # Iterate through array to add values to db
+
+get '/surveys/:id' do
+  @survey = Survey.find(params[:id])
+  erb :display_survey
+end

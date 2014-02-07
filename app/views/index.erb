@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <ul>
   <% @surveys.each do |survey| %>
     <li> <p> <a href='#'> <%= survey.title %> </a> - <%= survey.created_at %> - <%= survey.participants.count %>  </p> </li>
