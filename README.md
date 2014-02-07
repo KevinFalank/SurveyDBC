@@ -41,7 +41,14 @@ login form modal.
   - Create Question button
   - Kill survey button
 
-7. ' '
+7. 'survey/id '
+  - Display survey
+    - submit button
+
+
+
+
+
 
 
 
