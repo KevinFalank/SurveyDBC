@@ -10,6 +10,18 @@
         -Survey is a link to the page for that survey
    This is sorting somehow.
 
+Kevin will teach partials, and also will help us make the
+login form modal.
+
+2. '/login' (partial)
+  - login form
+   -username 
+   - password
+   -submit buton
+
+3. '/signup' (partial)
+   copy of sign-in
+
 
 --------------------------------------------------------
 #Survey Gorilla Challenge
