@@ -1,12 +1,3 @@
-get '/users/sign_in' do
-  erb :sign_in
-end
-
-# get '/users/new' do
-#   erb :sign_up
-# end
-
-
 
 #----------- USERS -----------
 
@@ -33,14 +24,14 @@ end
 
 get '/sessions/new' do
   # render sign-in page
-  @email = nil
+  @username = nil
   erb :sign_in
 end
 
 post '/sessions' do
   # sign-in
-  @email = params[:email]
-  user = User.authenticate(@email, params[:password])
+  @username = params[:username]
+  user = User.authenticate(@username, params[:password])
   if user
     # successfully authenticated; set up session and redirect
     session[:user_id] = user.id
