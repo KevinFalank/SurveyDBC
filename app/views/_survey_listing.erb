@@ -1,5 +1,9 @@
 <dl>
   <% @surveys.each do |survey| %>
-    <dt> <a href='/surveys/<%=survey.id%>'> <%= survey.title %> <dt> <dd> </a> - <%= survey.created_at %> - <%= survey.participants.count %> <dd>
+    <dt> <a href='/surveys/<%=survey.id%>/survey_stats'> <%= survey.title %> <dt> <dd> </a> - <%= survey.created_at %> - <%= survey.participants.count %> <dd>
   <% end %>
 </dl>
+
+<!-- Survey link links to the voter's side which should be linked to a stats page instead
+Create stats page to represent the results of each survey (ie. number of people for each answer) -->
+

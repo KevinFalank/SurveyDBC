@@ -1,0 +1,16 @@
+<div class='pie_chart' style='min-width:310px; height:400px; margin: 0 auto'></div>
+<% @survey.questions.each do |question| %>
+<form class='question_text' action='/question'
+method='post'>
+    <% question.answers.each do |answer| %>
+      <input name='<%= answer.text %>' type='hidden' value='<%= Result.where(answer_id: answer.id).count %>'>
+    <% end %>
+  <input type='submit' value='<%= question.text %>'>
+</form>
+  <!-- <p>Results for '<span class='question_text'><%= question.text %></span>'</p> -->
+<% end %>
+
+<!-- Need to take data from each survey and represent into a graph meaningfully
+1. List out all the questions that have the same corresponding survey_id
+2. Insert a graph for each question
+3. Put data into graph-->
