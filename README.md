@@ -10,6 +10,8 @@ rake db:seed
 shotgun
 ```
 
+Navigate to 
+
 
 #Common errors: 
 
@@ -63,7 +65,27 @@ kill -9 95704
 
 You'll have to chage the 95704 to the actuall process id, but you get the idea. The towtruck has come, dragged teh car away to the junkyard, and left the spot free for me to use. 
 
+
+##ActiveRecord::RecordNotFound at /
 -----------------------
+
+If someone has a screenshot or the full text of this error, please let me know. 
+
+The magic procedure for getting rid of this error is to delete the _localhost cookie_ in the _browser resources_. 
+
+To do this you, 
+
+Open the _Javascript console_ with cmd-option-J
+
+1. Click on the _resources_ tab. 
+2. Open the cookies row on the left-hand side by clicking on the litte grey arrow to the left and making it point down.
+3. Click on the item that says localhost to highlight it blue. 
+4. Right-click on the item that says localhost. A one-item menu will pop up that says 'clear.' The item (which is the _cookie_) will disappear. 
+5. PRess cmd-r to refresh the page.  The _cookie_ will reappaer, and hopefully the application will reappear with it.
+
+![](README_pictures/clear_cookie.png)
+
+Note: I don't honestly know what is going on or what I'm doing with this fix. This is purely a magic incantation. 
 
 
 
