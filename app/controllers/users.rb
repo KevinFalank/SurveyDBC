@@ -36,12 +36,13 @@ end
 
 post '/sessions' do
   # sign-in
+  p params
   @username = params[:username]
   user = User.authenticate(@username, params[:password])
   if user
     # successfully authenticated; set up session and redirect
-    session[:user_id] = user.id
-    redirect '/'
+    return session[:user_id] = user.id.to_s
+    # redirect '/'
   else
     # an error occurred, re-render the sign-in form, displaying an error
     @error = "Invalid email or password."
