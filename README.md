@@ -1,3 +1,16 @@
+#Starting the app
+
+Below is a list of the magic words you need to start the app. 
+
+```
+bundle install
+rake db:create
+rake db:migrate
+rake db:seed
+shotgun
+
+
+
 #Step 1: Wireframing
 
 ![](Documentation/wireframe.jpg)
