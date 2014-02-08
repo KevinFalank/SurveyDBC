@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var startingNo = 3;
+  var startingNo = 1;
   var $node = "";
   for(varCount=0;varCount<=startingNo;varCount++){
     var displayCount = varCount+1;
@@ -28,11 +28,13 @@ $(document).ready(function() {
   $('#create_survey').submit(function(event){
     event.preventDefault();
     var data = $(this).serialize();
+    var title = $("#survey").val()
+    console.log(title)
     $.post('/create', data, function(request){
       $('#create_survey').each(function(){
         this.reset();
       })
-      $('#survey_name').html('Add another question to survey')
+      if(title !== undefined) $('#survey_name').html('Add another question to survey named: ' + title)
     })
   })
 });

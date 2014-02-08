@@ -1,9 +1,41 @@
 .container {
+  top: 40;
   margin: 20px auto;
-  width: 600px;
+  margin-top: 70px;
+  width: 720px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  text-align:center;
+  border: 1px solid black;
+}
+.brand {
+  float: left;
+  margin: 16px;
+  font-size:23px;
+}
+nav {
+  width: 100%;
+  position:fixed;
+  top: 0;
+  background-color: tomato
 }
 th {
   text-align: left;
+}
+
+nav li {
+  display: inline;
+  margin: 0px 20px 0px 20px;
+}
+
+nav ul {
+  float: right;
+}
+
+a {
+  color:black;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
 }

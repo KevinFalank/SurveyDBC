@@ -1,5 +1,6 @@
 require 'faker'
 
+
 1.upto(5) do |n|
   Survey.create(users_id: 1, title: Faker::Lorem.word)
 end
