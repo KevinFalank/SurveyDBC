@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   var startingNo = 1;
   var $node = "";
   for(varCount=0;varCount<=startingNo;varCount++){
@@ -23,7 +24,10 @@ $(document).ready(function() {
   $('a#sign-out').on("click", function (e) {
     e.preventDefault();
     var request = $.ajax({ url: $(this).attr('href'), type: 'delete' });
-    request.done(function () { window.location = "/"; });
+    request.done(function () {
+      window.location = "/";
+    });
+  });
 
   $('#create_survey').submit(function(event){
     event.preventDefault();
