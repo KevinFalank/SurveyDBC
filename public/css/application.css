@@ -4,13 +4,15 @@
   margin-top: 70px;
   width: 720px;
   padding: 0px 20px 20px 20px;
-  text-align:center;
-  border: 1px solid black;
+  border: 1px dotted black;
 }
 .brand {
   float: left;
   margin: 16px;
   font-size:23px;
+}
+.options {
+  margin:5px 0px 15px 30px;
 }
 nav {
   width: 100%;
@@ -29,6 +31,7 @@ nav li {
 
 nav ul {
   float: right;
+  margin-top:20px;
 }
 
 a {
@@ -38,4 +41,7 @@ a {
 ul {
   list-style-type: none;
   padding: 0px;
+}
+dt {
+  margin: 10px;
 }

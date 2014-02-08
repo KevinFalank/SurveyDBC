@@ -1,5 +1,5 @@
-<ul>
+<dl>
   <% @surveys.each do |survey| %>
-    <li> <p> <a href='/surveys/<%=survey.id%>'> <%= survey.title %> </a> - <%= survey.created_at %> - <%= survey.participants.count %>  </p> </li>
+    <dt> <a href='/surveys/<%=survey.id%>'> <%= survey.title %> <dt> <dd> </a> - <%= survey.created_at %> - <%= survey.participants.count %> <dd>
   <% end %>
-</ul>
+</dl>

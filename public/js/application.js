@@ -10,11 +10,9 @@ $(document).ready(function() {
 
   $('form').on('click', '.removeVar', function(){
     $(this).parent().remove();
-    //varCount--;
   });
 
   $('#addVar').on('click', function(){
-    //new node
     varCount++;
     $node = '<p><label for="var'+varCount+'">Answer : </label><input type="text" name="var'+varCount+'" id="var'+varCount+'"><span class="removeVar">Remove Answer</span></p>';
     $(this).parent().before($node);
