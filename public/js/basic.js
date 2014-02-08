@@ -36,8 +36,13 @@ jQuery(function ($) {
 	$('#sign-in').submit(function (e){
 		e.preventDefault();
 	  var data = $(this).serialize();
-		$.post( "/sessions", data, function() {
+		$.post( "/sessions", data, function (e) {
+			console.log(e);
+			if ($('#display_survey')) {
+				$('#logon_user_id').val(e);
+			}
 		  if (survey_data_submitted === true) {
+		  	console.log('survey data submitted!');
 		  	$.post("/surveys", survey_form_data, function() {
 		  		// alert ("survey submitted");
 		  		survey_form_data = ""
@@ -46,7 +51,8 @@ jQuery(function ($) {
 
 		  	});
 		  } else {
-		  	window.location.href = '/'
+		  	// window.location.href = '/'
+		  	$.modal.close();
 		  }
 		});
 
