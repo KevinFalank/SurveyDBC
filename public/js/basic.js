@@ -37,7 +37,14 @@ jQuery(function ($) {
 		e.preventDefault();
 	  var data = $(this).serialize();
 		$.post( "/sessions", data, function (e) {
-			console.log(e);
+			//console.log(e);
+
+			var loggedOnUserNav = "<li><a id='acct-mgmt' href='/users/" + e + "/account'>Account Management</a></li> <li><a id='create-survey' href='/create'>Create Survey</a></li> <li><a id='sign-out' href='/sessions/" + e + "'>Sign Out</a></li>"
+      //console.log(loggedOnUserNav);
+      $('#logged_on_user').html(loggedOnUserNav);
+
+
+
 			if ($('#display_survey')) {
 				$('#logon_user_id').val(e);
 			}

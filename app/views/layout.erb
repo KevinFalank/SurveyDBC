@@ -21,7 +21,7 @@
   <nav id="header_nav">
     <div class="brand"><a href="/">Survey Gorilla</a></div>
 
-    <ul>
+    <ul id="logged_on_user">
       <% if current_user %>
         <li><a id="acct-mgmt" href="/users/<%=current_user.id%>/account">Account Management</a></li>
         <li><a id="create-survey" href="/create">Create Survey</a></li>
