@@ -66,6 +66,19 @@ kill -9 95704
 You'll have to chage the 95704 to the actuall process id, but you get the idea. The towtruck has come, dragged teh car away to the junkyard, and left the spot free for me to use. 
 
 
+## [Remote repository not creating branch when I push](http://stackoverflow.com/questions/21650972/remote-repository-not-creating-branch-when-i-push)
+
+This was the error message. 
+
+```
+Taras-MacBook-Air:SurveyDBCGroupProject tlroys$ git push -u origin TLR/Refactoring-Practice
+Username for 'https://github.com': tararoys
+Password for 'https://tararoys@github.com': 
+error: src refspec TLR/Refactoring-Practice does not match any.
+error: failed to push some refs to 'https://github.com/tararoys/SurveyDBC.git'
+```
+
+
 ##ActiveRecord::RecordNotFound at /
 -----------------------
 
