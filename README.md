@@ -8,11 +8,12 @@ rake db:create
 rake db:migrate
 rake db:seed
 shotgun
+```
 
 
 #Common errors: 
 
-## no acceptor (port is in use or requires root privileges
+## no acceptor (port is in use or requires root privileges)
 
 
 ```
