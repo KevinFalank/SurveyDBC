@@ -11,6 +11,7 @@
   <% end %>
   </ul>
   <input type='hidden' name='survey_id' value='<%= @survey.id %>'>
-  <input type='submit' value='submit survey'>
+  <input type='hidden' id='logon_user_id' value='<%= @user_id %>'>
+  <input type='submit' class="validate_login" value='submit survey'>
 </form>
 
