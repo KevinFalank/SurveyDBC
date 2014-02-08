@@ -1,8 +1,8 @@
-<div class="container">
+<h1>Our Most Popular Surveys</h1>
   <ul>
   <% @surveys.each do |survey| %>
     <li> <p> <a href='/surveys/<%=survey.id%>'> <%= survey.title %> </a> - <%= survey.created_at %> - <%= survey.participants.count %>  </p> </li>
   <% end %>
   </ul>
-</div>
+
 
