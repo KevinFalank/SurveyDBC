@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel='icon' type='image/png' href='/gorilla.ico'>  
+  <link rel='icon' type='image/png' href='/gorilla.ico'>
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
   <link rel="stylesheet" href="/css/basic.css">
@@ -11,7 +11,7 @@
   <script src="/js/application.js"></script>
   <script src="/js/basic.js"></script>
   <script src="/js/jquery.simplemodal.js"></script>
-  
+
 
 
   <script src="/js/stats.js"></script>
@@ -26,6 +26,7 @@
 
     <ul id="logged_on_user">
       <% if current_user %>
+        <li>Welcome <%= User.find(sessionp:id]).username.capitalize %></li>
         <li><a id="acct-mgmt" href="/users/<%=current_user.id%>/account">Account Management</a></li>
         <li><a id="create-survey" href="/create">Create Survey</a></li>
         <li><a id="sign-out" href="/sessions/<%= current_user.id %>">Sign Out</a></li>
@@ -40,13 +41,11 @@
   <div id="basic-modal-content">
     <h1>Sign In</h1>
 
-    
+
     <div class="errors"></div>
 
     <form id="sign-in" method="post" action="/sessions">
-      <label class="label" for="username">Email</label>
       <input type="text" name="username" placeholder="user name" value="<%= @username %>"><br>
-      <label class="label" for="password">Password</label>
       <input type="password" name="password" placeholder="password">
       <br>
       <div class="submit"><input type="submit" value="Sign In"></div>

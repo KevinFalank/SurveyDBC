@@ -4,7 +4,7 @@ $(document).ready(function() {
   var $node = "";
   for(varCount=0;varCount<=startingNo;varCount++){
     var displayCount = varCount+1;
-    $node += '<p><label for="var'+displayCount+'"></label><input type="text" placeholder="Answer" name="var'+displayCount+'" id="var'+displayCount+'"><span class="removeVar"> Remove</span></p>';
+    $node += '<p><label for="var'+displayCount+'"></label><input type="text" placeholder="Answer" name="var'+displayCount+'" id="var'+displayCount+'"><button class="removeVar"> Remove</button></p>';
   }
   $('.answers').prepend($node);
 
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
   $('#addVar').on('click', function(){
     varCount++;
-    $node = '<p><label for="var'+varCount+'"></label><input placeholder="Answer" type="text" name="var'+varCount+'" id="var'+varCount+'"><span class="removeVar"> Remove</span></p>';
+    $node = '<p><label for="var'+varCount+'"></label><input placeholder="Answer" type="text" name="var'+varCount+'" id="var'+varCount+'"><button class="removeVar"> Remove</button></p>';
     $(this).parent().before($node);
   });
 
