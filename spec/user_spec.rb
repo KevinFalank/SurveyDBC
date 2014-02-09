@@ -45,4 +45,13 @@ describe User do
     end 
   end 
 
+  context "When trying to log a user in," do
+    it "use the User.authenticate method." do
+      jacky = User.authenticate('jacky', 'password')
+
+      expect(jacky.username).to eql("jacky")
+
+    end
+  end
+
 end
