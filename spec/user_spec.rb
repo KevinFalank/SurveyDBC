@@ -14,4 +14,26 @@ describe User do
     end     
   end
 
+  context "When creating a user with a name(more generally, creating a new object using parameters)" do
+    it "use four ways to set values creating a new user" do
+      
+      tara = User.new(username: "Tara")
+      expect(tara.username).to eql("Tara")
+
+      kori = User.new({username: "Kori"})
+      expect(kori.username).to eql("Kori")
+
+      steven = User.new
+      steven.username = "Steven"
+      expect(steven.username).to eql("Steven")
+
+      carolyn = User.new do |c|
+        c.username = "Carolyn"
+      end
+      expect(carolyn.username).to eql("Carolyn")
+
+    end
+    
+  end 
+
 end
