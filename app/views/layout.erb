@@ -40,9 +40,8 @@
   <div id="basic-modal-content">
     <h1>Sign In</h1>
 
-    <% if @error %>
-      <div class="errors"><%= @error %></div>
-    <% end %>
+    
+    <div class="errors"></div>
 
     <form id="sign-in" method="post" action="/sessions">
       <label class="label" for="username">Email</label>
