@@ -10,7 +10,10 @@ $('.question_text').on('click', function(event) {
     for(var i = 0; i < data.length; i++) {
       graphData[i] = [data[i].name, parseInt(data[i].value)]
   }
-console.log(graphData)
+
+    $('.gorilla').css('display', 'none')
+    $('.pie_chart').css('display', 'block')
+
     $('.pie_chart').highcharts({
         chart: {
             plotBackgroundColor: null,
@@ -43,14 +46,3 @@ console.log(graphData)
     });
 });
 });
-
-//
-
-// Our data needs to be passed in with the 'name' of the answer and the number of times the answer has been selected
-
-
-
-//
-
-// Our data needs to be passed in with the 'name' of the answer and the number of times the answer has been selected
-
