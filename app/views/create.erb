@@ -1,12 +1,12 @@
 <form id='create_survey' action='/create' method='post'>
   <h3>Give Your Survey a Name</h3>
   <% if session[:survey_id] != nil %>
-    <p id='survey_name'>Name: <input id='survey' type='text' name='title' value='<%= Survey.find(session[:survey_id]).title %>'></p>
+    <p id='survey_name'><input placeholder='Name' id='survey' type='text' name='title' value='<%= Survey.find(session[:survey_id]).title %>'></p>
   <% else %>
-      <p id='survey_name'>Name: <input id='survey' type='text' name='title'></p>
+      <p id='survey_name'><input placeholder='Name' id='survey' type='text' name='title'></p>
   <% end %>
 
-<p>Question: <input type='text' name='question'></p>
+<p><input placeholder='Question' type='text' name='question'></p>
 
 <div class='answers'>
 <p>
