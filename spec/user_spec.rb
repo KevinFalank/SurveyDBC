@@ -33,7 +33,16 @@ describe User do
       expect(carolyn.username).to eql("Carolyn")
 
     end
-    
+  end 
+
+  context "When creating a password for a user that doesn't already have one" do
+    it "use bcrypt " do
+      tara = User.new(username: "Tara") #create a new user
+      expect(tara.password_hash).to eql(nil)
+      tara.password = "password" #create an encrypted password for a user
+      expect(tara.password_hash).not_to eql(nil)
+
+    end 
   end 
 
 end
