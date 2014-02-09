@@ -1,4 +1,4 @@
-
+require 'json'
 #----------- USERS -----------
 
 get '/users/new' do
@@ -41,7 +41,9 @@ post '/sessions' do
   user = User.authenticate(@username, params[:password])
   if user
     # successfully authenticated; set up session and redirect
-    return session[:user_id] = user.id.to_s
+    session[:user_id] = user.id.to_s
+    content_type :json
+    {id: session[:user_id], username: User.find(session[:user_id]).username.capitalize}.to_json
     # redirect '/'
   else
     # an error occurred, re-render the sign-in form, displaying an error

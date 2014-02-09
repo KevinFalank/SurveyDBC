@@ -37,13 +37,13 @@ jQuery(function ($) {
 		e.preventDefault();
 	  var data = $(this).serialize();
 		$.post( "/sessions", data, function (e) {
-			//console.log(e);
+			console.log(e);
 
-			if (e === "0") {
+			if (e.id === "0") {
 				$('#basic-modal-content .errors').html('Invalid user name or password.<br/><br/>')
 			} else {
 
-				var loggedOnUserNav = "<li><a id='acct-mgmt' href='/users/" + e + "/account'>Account Management</a></li> <li><a id='create-survey' href='/create'>Create Survey</a></li> <li><a id='sign-out' href='/sessions/" + e + "'>Sign Out</a></li>"
+				var loggedOnUserNav = "<li><strong>Welcome " + e.username + "<li><a id='acct-mgmt' href='/users/" + e.id + "/account'>Account Management</a></li> <li><a id='create-survey' href='/create'>Create Survey</a></li> <li><a id='sign-out' href='/sessions/" + e.id + "'>Sign Out</a></li>"
 	      //console.log(loggedOnUserNav);
 	      $('#logged_on_user').html(loggedOnUserNav);
 

@@ -20,13 +20,12 @@
   <title></title>
 </head>
 <body>
-
   <nav id="header_nav">
     <div class="brand"><a href="/">Survey Gorilla</a></div>
 
     <ul id="logged_on_user">
       <% if current_user %>
-
+        <li><strong>Welcome <%= current_user.username.capitalize %></strong></li>
         <li><a id="acct-mgmt" href="/users/<%=current_user.id%>/account">Account Management</a></li>
         <li><a id="create-survey" href="/create">Create Survey</a></li>
         <li><a id="sign-out" href="/sessions/<%= current_user.id %>">Sign Out</a></li>
