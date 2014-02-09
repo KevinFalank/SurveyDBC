@@ -5,6 +5,12 @@ You have reached the account dashboard!
 </div>
 
 <h3>Surveys you have participated in: </h3>
+<% participants = Participant.where(user_id: session[:user_id]) %>
+<dl>
+  <% participants.each do |participant| %>
+    <dt> <a href='/surveys/<%= participant.survey_id %>/survey_stats'> <%= Survey.find(participant.survey_id).title %> <dt> <dd> </a> - <%= participant.created_at %> <dd>
+  <% end %>
+</dl>
 
 <!-- List out all the surveys the user has created
 List out all surveys the user has participated in -->
