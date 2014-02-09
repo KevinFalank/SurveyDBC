@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel='icon' type='image/png' href='/gorilla.ico'>
-<link rel="stylesheet" href="/css/normalize.css">
+  <link rel='icon' type='image/png' href='/gorilla.ico'>  
+  <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="stylesheet" href="/css/basic_ie.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
+  <script src="/js/basic.js"></script>
+  <script src="/js/jquery.simplemodal.js"></script>
+  
+
+
+  <script src="/js/stats.js"></script>
+  <script src="/js/highcharts.js"></script>
 
   <title></title>
 </head>
 <body>
 
-  <nav>
+  <nav id="header_nav">
     <div class="brand"><a href="/">Survey Gorilla</a></div>
 
-    <ul>
+    <ul id="logged_on_user">
       <% if current_user %>
         <li><a id="acct-mgmt" href="/users/<%=current_user.id%>/account">Account Management</a></li>
         <li><a id="create-survey" href="/create">Create Survey</a></li>
         <li><a id="sign-out" href="/sessions/<%= current_user.id %>">Sign Out</a></li>
       <% else %>
-        <li><a href="/sessions/new">Sign In</a></li>
+        <!-- <li><a href="/sessions/new">Sign In</a></li> -->
+        <li><a href="#" class="basic">Sign In</a></li>
         <li><a href="/users/new">Sign Up</a></li>
       <% end %>
     </ul>
 
   </nav>
+  <div id="basic-modal-content">
+    <h1>Sign In</h1>
+
+    
+    <div class="errors"></div>
+
+    <form id="sign-in" method="post" action="/sessions">
+      <label class="label" for="username">Email</label>
+      <input type="text" name="username" placeholder="user name" value="<%= @username %>"><br>
+      <label class="label" for="password">Password</label>
+      <input type="password" name="password" placeholder="password">
+      <br>
+      <div class="submit"><input type="submit" value="Sign In"></div>
+      <div class="close"><a href="#" class="simplemodal-close">Cancel</a></div>
+    </form>
+
+  </div>
+
   <div class='container'>
     <%= yield %>
   </div>
+
 </body>
 </html>
