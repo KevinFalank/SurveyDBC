@@ -54,4 +54,12 @@ describe User do
     end
   end
 
+  context "When checking to see what the password is," do
+    it "uses the password method" do
+      #Something seems wrong with the Password.new method. let us test this. 
+      jacky = User.find_by_username('jacky')
+      expect(jacky.password).to eql('$2a$10$/oRbeA9fw240CEEbpftN4.JDCXNI26t.MQN2YqVDbDQuOxvnF1gRi')
+    end
+  end 
+
 end
