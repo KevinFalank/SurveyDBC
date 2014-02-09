@@ -1,6 +1,8 @@
 <dl>
   <% @surveys.each do |survey| %>
-    <dt> <a href='/surveys/<%=survey.id%>/survey_stats'> <%= survey.title %> <dt> <dd> </a> - <%= survey.created_at %> - <%= survey.participants.count %> <dd>
+  <% if survey.title != "" %>
+    <dt><strong><a href='/surveys/<%=survey.id%>/survey_stats'> <%= survey.title %></strong> <dt> <dd> </a> - <%= survey.created_at %> - <%= survey.participants.count %> <dd>
+      <% end %>
   <% end %>
 </dl>
 

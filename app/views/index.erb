@@ -1,8 +1,10 @@
 <h1>Our Most Popular Surveys</h1>
 <dl>
   <% @surveys.each do |survey| %>
+    <% if survey.title != "" %>
     <dt> <strong><a href='/surveys/<%=survey.id%>'> <%= survey.title %> </strong></a> <dt> <dd>Created By: <%= User.find(survey.users_id).username.capitalize %>, <%= survey.created_at.strftime("%B %d, %Y") %> - Completed <%= survey.participants.count %> Times<dd>
   <% end %>
+    <% end %>
 </dl>
 
 
