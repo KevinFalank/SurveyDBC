@@ -12,6 +12,11 @@ describe Answer do
       expect(fox_say.results).not_to eql(0)
     end
 
+    it "has many participants" do
+      fox_say = Answer.all.first
+      expect(fox_say.participants).not_to eql(0)  
+    end 
+
 
 
   end 
