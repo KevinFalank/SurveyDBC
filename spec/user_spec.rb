@@ -70,6 +70,11 @@ describe User do
         user = User.create(username: "ca")
         expect(user.errors.messages[:username][0]).to eql("must be at least 3 characters, fool!")
       end
+      
+      it "Password must be at least six characters long" do
+        user = User.create(password: "ca")
+        expect(user.errors.messages[:entered_password][0]).to eql("is too short (minimum is 6 characters)")
+      end
     end
   end
 
