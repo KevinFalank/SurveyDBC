@@ -16,5 +16,12 @@ describe Participant do
       jacky = Participant.find_by_id(1)
       expect(jacky.results.length).to eql(2) 
     end 
+
+    it "has many answers through results" do 
+      jacky = Participant.find_by_id(1)
+      expect(jacky.answers[0].text).to eql("Wa-pa-pa-pa-pa-pa-pa-pow!")
+      expect(jacky.answers[1].text).to eql("Hatee-hatee-hatee-ho!")
+    end 
   end 
+
 end
