@@ -85,5 +85,18 @@ describe User do
   end
 
 
+  describe "activerecord associations" do
+    it "has many participants" do 
+      jacky = User.find_by_username('jacky')
+      expect(jacky.participants[0]).to eql(Participant.all[0]) #Not comfortable with these hardcoded values.    
+    end
+
+   it "has many surveys" do 
+      jacky = User.find_by_username('jacky')
+      expect(jacky.surveys[0]).to eql(Survey.find_by_id(1))
+   end 
+
+  end 
+
 
 end
