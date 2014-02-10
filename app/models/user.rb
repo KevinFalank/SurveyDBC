@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   attr_reader :entered_password
 
   has_many :participants
+  has_many :surveys, :foreign_key => "users_id"
   has_many :surveys, :through => :participants
 
   validates :username, :length => { :minimum => 3, :message => "must be at least 3 characters, fool!" }, uniqueness: true

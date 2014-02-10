@@ -4,6 +4,8 @@ jacky = User.create(username: 'jacky')
 jacky.password = 'password'
 jacky.save
 
+#Jacky cretes a survey
+
 survey = Survey.create(title: 'Animal Sounds', users_id: 1)
 survey.questions << question1 = Question.create(text: 'What does the Fox say?')
 survey.questions << question2 = Question.create(text: 'What does the Squerrel say?')
@@ -16,6 +18,13 @@ question2.answers << Answer.create(text: 'Jacha-chacha-chacha-chow!')
 question2.answers << Answer.create(text: 'Fraka-kaka-kaka-kaka-kow!')
 question2.answers << Answer.create(text: 'A-hee-ahee ha-hee!')
 question2.answers
+
+#Jacky takes his own survey
+#
+
+Participant.create(survey_id: 1, user_id: 1)
+
+# More stuff 
 
 participants = []
 1.upto(100) do |n|
