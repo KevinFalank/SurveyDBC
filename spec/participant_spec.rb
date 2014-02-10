@@ -12,7 +12,7 @@ describe Participant do
       expect(jacky.survey.title).to eql("Animal Sounds")
     end 
 
-    it "has many resutls" do
+    it "has many results" do
       jacky = Participant.find_by_id(1)
       expect(jacky.results.length).to eql(2) 
     end 
