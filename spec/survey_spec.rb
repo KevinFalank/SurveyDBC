@@ -18,7 +18,11 @@ describe Survey do
         expect(animal_sounds.questions.length).to eql(2)
       end 
 
-      
+      xit "has many users who took the survey(Has many users through participants)" do 
+        animal_sounds = Survey.find_by_title("Animal Sounds")
+        expect(animal_sounds.users.length).to eql(101) 
+      end
+
     end
   end
 
