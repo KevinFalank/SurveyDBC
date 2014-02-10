@@ -22,8 +22,10 @@ question2.answers
 #Jacky takes his own survey
 #
 
-Participant.create(survey_id: 1, user_id: 1)
+jacky_takes_a_survey = Participant.create(survey_id: 1, user_id: 1)
 
+jacky_takes_a_survey.results << Result.create(participant_id: 1, answer_id: 1)
+jacky_takes_a_survey.results << Result.create(participant_id: 1, answer_id: 3)
 # More stuff 
 
 participants = []
