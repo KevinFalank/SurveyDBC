@@ -13,6 +13,11 @@ describe Survey do
         expect(animal_sounds.participants.length).not_to eql(0); 
       end 
 
+      it "has many questions" do
+        animal_sounds = Survey.find_by_title("Animal Sounds")
+        expect(animal_sounds.questions.length).to eql(2)
+      end 
+
       
     end
   end
