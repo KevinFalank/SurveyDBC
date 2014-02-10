@@ -17,7 +17,5 @@ describe Answer do
       expect(fox_say.participants).not_to eql(0)  
     end 
 
-
-
   end 
 end
