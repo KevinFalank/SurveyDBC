@@ -59,7 +59,7 @@ describe User do
       it "uses the password accessor method" do
         #Something seems wrong with the Password.new method. let us test this. 
         jacky = User.find_by_username('jacky')
-        expect(jacky.password).to eql('$2a$10$/oRbeA9fw240CEEbpftN4.JDCXNI26t.MQN2YqVDbDQuOxvnF1gRi')
+        expect(jacky.password).to eql('$2a$10$cif.xaCreqIpQVDtSMfRr.mdi5PSyoDZ6.r4/VpWttqY22h6L2cn6') #This changes every time you reseed the database
       end
     end 
   end
