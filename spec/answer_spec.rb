@@ -1,7 +1,13 @@
 require 'spec_helper'
 
 describe Answer do
-    
-  pending "add some examples to (or delete) /Users/tlroys/Desktop/SurveyDBCGroupProject/Rakefile"
+  context "Testing Activerecord Associations" do
+    it "belongs to question" do 
+      fox_say = Answer.all.first
+      expect(fox_say.question.text).to eql("What does the Fox say?")
+    end 
 
+
+
+  end 
 end
