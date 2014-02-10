@@ -64,5 +64,15 @@ describe User do
     end 
   end
 
+  describe "User Activerecord validations" do
+    context "checking for validations" do 
+      it "username must be at least 3 characters long" do
+        user = User.create(username: "ca")
+        expect(user.errors.messages[:username][0]).to eql("must be at least 3 characters, fool!")
+      end
+    end
+  end
+
+
 
 end
