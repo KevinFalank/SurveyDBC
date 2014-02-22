@@ -48,18 +48,25 @@ You can call the tow truck to get rid of it.
 To find out the license plate number of the car, run the following set of [commands I found on Stack Overflow](http://stackoverflow.com/a/11973828/1344732) 
 
 ```
-ps ax | grep sinatra
-95704 s002  R+     0:00.00 grep ruby
-```
+ps ax | grep ruby
 
+```
 This finds the process id, aka the license plate number of the 'car' occupying the 'parking spot.' Note: the server occupying my 'spot' is in fact a server written using the programming language ruby: sort of like some cars are Chevorlets. I can tell the person finding out the licenseplate number to look for the chevrolet, and he will find the right car as long as there are no other cars around. Since this 'zombie server' is the only ruby process running on my computer, telling the grep commadn to look for ruby will give the right process id/ license plate numbers.
 
-The first five numbers are the process id. 
 
-Then run the command 
+-The output should look like this: there should be two things in the list
 
 ```
-kill -9 95704
+27235 ?? S 0:00.72 /Users/tlroys/.rvm/gems/ruby-1.9.3-p484/bin/shotgun
+27393 s000 S+ 0:00.00 grep ruby
+```
+
+The first one is the actual 'zombie server' you are looking for. The second thing is funny, because you are looking for all processes that contains the word ruby, and so it find the process that is looking for all processes that contain the word ruby. Haha.
+
+Kill the first process. with the following command. Make sure to change the numbers to the actual process id:
+
+```
+kill -9 27235
 ```
 
 
